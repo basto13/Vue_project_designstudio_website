@@ -1,1 +1,436 @@
-@import "../scss/helpers/_helpers.scss";
+@import "../scss/helpers/helpers.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 70%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__logo {
+      width: 33.998px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+    &__name {
+      color: #292f36;
+      font-family: DM Serif Display;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 50px */
+    }
+  }
+
+  &__menu {
+    color: #292f36;
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+    display: flex;
+    flex-direction: row;
+
+    &__option {
+      padding-left: 50px;
+    }
+  }
+}
+
+.introduction-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 60px;
+  }
+
+  &__content {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 40px;
+
+    &__heading {
+      color: #292f36;
+      font-family: DM Serif Display;
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 81.25px */
+    }
+    &__text {
+      color: #4d5053;
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+    &__button {
+      color: #fff;
+      text-align: center;
+      font-family: Jost;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%; /* 22.5px */
+      letter-spacing: 0.36px;
+
+      border-radius: 18px;
+      background: #292f36;
+      box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+
+      display: flex;
+      padding: 26px 49px 26px 48px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}
+
+.projects-menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    &__heading {
+      color: #292f36;
+      text-align: center;
+      font-family: DM Serif Display;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 62.5px */
+      letter-spacing: 1px;
+      margin-bottom: 0;
+    }
+    &__text {
+      color: #4d5053;
+      text-align: center;
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+  }
+  &__table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    max-width: 100%;
+    &__block {
+      &_img {
+        max-width: 100%; /* Максимальная ширина изображения равна ширине родительского элемента */
+        height: auto; /* Сохраняет пропорции изображения */
+        display: block; /* Убирает нежелательное пространство под изображением */
+        margin: 0 auto; /* Центрирует изображение горизонтально внутри родительского элемента */
+      }
+
+      .projects_img_1 {
+        border-top-right-radius: 50px;
+      }
+
+      .projects_img_2 {
+        border-top-left-radius: 50px;
+      }
+
+      .projects_img_3 {
+        border-bottom-right-radius: 50px;
+      }
+
+      .projects_img_4 {
+        border-bottom-left-radius: 50px;
+      }
+
+      &__info {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+        align-items: center;
+        &_heading {
+          grid-row: 1;
+          grid-column: 1;
+
+          margin-bottom: 0;
+
+          color: #292f36;
+          font-family: DM Serif Display;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 125%; /* 31.25px */
+          letter-spacing: 0.5px;
+        }
+        &_section {
+          grid-row: 2;
+          grid-column: 1;
+
+          margin-top: 0;
+
+          color: #4d5053;
+          font-family: Jost;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 33px */
+          letter-spacing: 0.22px;
+        }
+        .nav-button {
+          grid-row: 1 / span 2; /* Занимает две строки */
+          grid-column: 2;
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+.statistics-block {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  background-color: #f4f0ec;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__data {
+      width: 77px;
+      color: #cda274;
+      font-family: DM Serif Display;
+      font-size: 85px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 106.25px */
+      letter-spacing: 1.7px;
+    }
+    &__type {
+      color: #4d5053;
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+  }
+}
+
+.news {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__intro {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    &__heading {
+      color: #292f36;
+
+      text-align: center;
+      font-family: DM Serif Display;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 62.5px */
+      letter-spacing: 1px;
+    }
+    &__text {
+      color: #4d5053;
+
+      text-align: center;
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    &__item {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 21px;
+      border-radius: 62px;
+      border: 1px solid #e7e7e7;
+      box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+      &__img {
+        max-width: 100%;
+        border-radius: 62px;
+      }
+      &__heading {
+        max-width: 100%;
+        color: #292f36;
+
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%; /* 31.25px */
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+      }
+      &__text {
+        max-width: 100%;
+        color: #4d5053;
+
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+      }
+    }
+
+    &__item:hover {
+      background: #f4f0ec;
+      box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 100px 0 100px 0;
+  .company-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__logo {
+      width: 33.998px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+    &__name {
+      color: #292f36;
+      font-family: DM Serif Display;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 50px */
+    }
+    &__text {
+      color: #4d5053;
+
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 33px */
+      letter-spacing: 0.22px;
+    }
+
+    &__social-network {
+      display: flex;
+      gap: 50px;
+      flex-direction: row;
+    }
+  }
+
+  .app-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    p {
+      color: #4d5053;
+
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 300%; /* 66px */
+      letter-spacing: 0.22px;
+    }
+
+    p:first-child {
+      color: #292f36;
+      font-family: DM Serif Display;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 31.25px */
+    }
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    p {
+      color: #4d5053;
+
+      font-family: Jost;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 300%; /* 66px */
+      letter-spacing: 0.22px;
+    }
+
+    p:first-child {
+      color: #292f36;
+      font-family: DM Serif Display;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%; /* 31.25px */
+    }
+  }
+}
