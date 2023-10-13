@@ -1,0 +1,50 @@
+@import "../scss/helpers/helpers.scss";
+
+.intro-section {
+  &__img {
+    width: 100vw;
+    margin-bottom: 100px;
+  }
+}
+
+.post-content {
+  &__heading {
+    @include main_heading();
+  }
+
+  &__card {
+    display: flex;
+    padding: 22px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 62px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+    &__img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 62px;
+    }
+    &__description {
+      display: flex;
+      flex-direction: column;
+      &__heading {
+        @include navbar_heading();
+        letter-spacing: 0.5px;
+      }
+      &__text {
+        @include general_text();
+      }
+      &__date {
+        @include general_text();
+        font-size: 16px;
+        font-style: normal;
+        line-height: 150%; /* 24px */
+        letter-spacing: 0.16px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

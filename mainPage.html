@@ -235,39 +235,41 @@
               points of using.
             </p>
           </div>
-          <div class="news__block">
-            <div class="news__block__item">
-              <img
-                src="img/news_photo_1.jpg"
-                alt="news_photo"
-                class="news__block__item__img"
-              />
-              <div class="news__block__item__heading">
-                Let’s Get Solution For Building Construction Work
+          <div id="mainApp">
+            <div class="news__block">
+              <div class="news__block__item">
+                <img
+                  src="img/news_photo_1.jpg"
+                  alt="news_photo"
+                  class="news__block__item__img"
+                />
+                <div class="news__block__item__heading">
+                  Let’s Get Solution For Building Construction Work
+                </div>
+                <div class="news__block__item__date">26 December,2022</div>
               </div>
-              <div class="news__block__item__date">26 December,2022</div>
-            </div>
-            <div class="news__block__item">
-              <img
-                src="img/news_photo_2.jpg"
-                alt="news_photo"
-                class="news__block__item__img"
-              />
-              <div class="news__block__item__heading">
-                Low Cost Latest Invented Interior Designing Ideas.
+              <div class="news__block__item">
+                <img
+                  src="img/news_photo_2.jpg"
+                  alt="news_photo"
+                  class="news__block__item__img"
+                />
+                <div class="news__block__item__heading">
+                  Low Cost Latest Invented Interior Designing Ideas.
+                </div>
+                <div class="news__block__item__date">22 December,2022</div>
               </div>
-              <div class="news__block__item__date">22 December,2022</div>
-            </div>
-            <div class="news__block__item">
-              <img
-                src="img/news_photo_3.jpg"
-                alt="news_photo"
-                class="news__block__item__img"
-              />
-              <div class="news__block__item__heading">
-                Best For Any Office &amp; Business Interior Solution
+              <div class="news__block__item">
+                <img
+                  src="img/news_photo_3.jpg"
+                  alt="news_photo"
+                  class="news__block__item__img"
+                />
+                <div class="news__block__item__heading">
+                  Best For Any Office &amp; Business Interior Solution
+                </div>
+                <div class="news__block__item__date">25 December,2022</div>
               </div>
-              <div class="news__block__item__date">25 December,2022</div>
             </div>
           </div>
         </div>
@@ -336,5 +338,38 @@
         </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const App = {
+        data() {
+          return {
+            newsItems: [
+              {
+                imgSrc: "img/news_photo_1.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+              {
+                imgSrc: "img/news_photo_2.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+              {
+                imgSrc: "img/news_photo_3.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+            ],
+          };
+        },
+        methods: {
+          getDiscount() {},
+        },
+      };
+      Vue.createApp(App).mount("#app");
+    </script>
   </body>
 </html>
