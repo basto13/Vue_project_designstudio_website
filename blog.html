@@ -166,12 +166,32 @@
         </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/vue@next"></script>
 
     <script>
       const blogApp = {
         data() {
           return {
-            newsItems: App._data.newsItems, // Используем данные из главной страницы
+            newsItems: [
+              {
+                imgSrc: "img/news_photo_1.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+              {
+                imgSrc: "img/news_photo_2.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+              {
+                imgSrc: "img/news_photo_3.jpg",
+                alt: "news_photo",
+                heading: "Let’s Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+              },
+            ],
           };
         },
       };
