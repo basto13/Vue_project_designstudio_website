@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+  </head>
+  <body>
+    <div id="app">
+      <tags-component @select-tag="selectTag"></tags-component>
+      <blog-articles-list :selectedTag="selectedTag"></blog-articles-list>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.2.0/dist/vue.global.prod.js"></script>
+
+    <script>
+      const TagsComponent = {
+        data() {
+          return {
+            tagsList: [
+              "Kitchen",
+              "Bedroom",
+              "Building",
+              "Architecture",
+              "Kitchen Planning",
+            ],
+          };
+        },
+        methods: {
+          selectTag(tag) {
+            this.$emit("select-tag", tag);
+          },
+        },
+        template: `
+        <div>
+          <h1>Tags</h1>
+          <div
+            class="blogpost__tag-selector"
+            v-for="tag in tagsList"
+            :key="tag"
+            @click="selectTag(tag)"
+            style="cursor: pointer"
+          >
+            {{ tag }}
+          </div>
+        </div>
+      `,
+      };
+
+      const BlogArticlesList = {
+        props: ["selectedTag"],
+        data() {
+          return {
+            articlesList: [
+              {
+                // imgSrc: "img/blog-details_photo_1.jpg",
+                alt: "news_photo",
+                heading: "Lets Get Solution For Building Construction Work",
+                text: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable. Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+                date: "26 December, 2022",
+                tag: "Kitchen",
+              },
+              {
+                imgSrc: "img/blog-details_photo_2.jpg",
+                alt: "news_photo",
+                heading: "Design sprints are great",
+                text: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.",
+                date: "26 December, 2022",
+                tag: "Architecture",
+              },
+              {
+                imgSrc: "img/news_photo_3.jpg",
+                alt: "news_photo",
+                heading: "Lets Get Solution For Building Construction Work",
+                date: "26 December, 2022",
+                tag: "Bedroom",
+              },
+            ],
+          };
+        },
+        computed: {
+          filteredArticles() {
+            if (!this.selectedTag) {
+              return this.articlesList;
+            }
+            return this.articlesList.filter(
+              (article) => article.tag === this.selectedTag
+            );
+          },
+        },
+        template: `
+        <div>
+          <h1>Blog Articles</h1>
+          <div v-for="article in filteredArticles" :key="article.heading">
+            <div>
+              <img :src="article.imgSrc" :alt="article.alt">
+              <h2>{{ article.heading }}</h2>
+              <p>{{ article.text }}</p>
+              <p>{{ article.date }}</p>
+              <p>{{ article.tag }}</p>
+            </div>
+          </div>
+        </div>
+      `,
+      };
+
+      const app = Vue.createApp({
+        components: {
+          "tags-component": TagsComponent,
+          "blog-articles-list": BlogArticlesList,
+        },
+        data() {
+          return {
+            selectedTag: null,
+          };
+        },
+        methods: {
+          selectTag(tag) {
+            this.selectedTag = tag;
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

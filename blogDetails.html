@@ -56,25 +56,16 @@
         />
       </div>
       <div class="container">
-        <!-- <div id="blogApp" class="articles-news">
-          <div class="news__block">
-            <div
-              class="news__block__item"
-              v-for="newsItem in newsItems"
-              :key="newsItem.heading"
-            >
-              <img
-                :src="newsItem.imgSrc"
-                :alt="newsItem.alt"
-                class="news__block__item__img"
-              />
-              <div class="news__block__item__heading">
-                {{ newsItem.heading }}
-              </div>
-              <div class="news__block__item__date">{{ newsItem.date }}</div>
-            </div>
-          </div>
-        </div> -->
+        <div class="blogpost__block" id="App">
+          <blog-articles-list :tags-list="tagsList"></blog-articles-list>
+
+          <!-- <div class="blogpost__block_selectors">
+            <h2>Tags</h2>
+            <ul>
+              <li v-for="tag in tagsList" :key="tag">{{ tag }}</li>
+            </ul>
+          </div> -->
+        </div>
       </div>
     </main>
     <div class="container">
@@ -144,35 +135,28 @@
     </div>
 
     <script src="https://unpkg.com/vue@next"></script>
+    <script src="./components/blogArticles_list.js"></script>
 
-    <script>
-      const blogApp = {
+    <script type="module">
+      const App = {
+        components: {
+          blogArticlesList,
+        },
         data() {
           return {
-            newsItems: [
-              {
-                imgSrc: "img/news_photo_1.jpg",
-                alt: "news_photo",
-                heading: "Let’s Get Solution For Building Construction Work",
-                date: "26 December, 2022",
-              },
-              {
-                imgSrc: "img/news_photo_2.jpg",
-                alt: "news_photo",
-                heading: "Let’s Get Solution For Building Construction Work",
-                date: "26 December, 2022",
-              },
-              {
-                imgSrc: "img/news_photo_3.jpg",
-                alt: "news_photo",
-                heading: "Let’s Get Solution For Building Construction Work",
-                date: "26 December, 2022",
-              },
+            tagsList: [
+              "Kitchen",
+              "Bedroom",
+              "Building",
+              "Architecture",
+              "Kitchen Planning",
             ],
           };
         },
+        methods: {},
       };
-      Vue.createApp(blogApp).mount("#blogApp");
+
+      Vue.createApp(App).mount("#App");
     </script>
   </body>
 </html>
