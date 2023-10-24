@@ -1,4 +1,11 @@
-const blogArticlesList = {
+<template>
+  <div></div>
+</template>
+
+<script>
+    export default {
+
+        const blogArticlesList = {
   props: ["tagsList"],
   data() {
     return {
@@ -86,3 +93,8 @@ const blogArticlesList = {
   </div>
 `,
 };
+
+    }
+</script>
+
+<style lang="scss" scoped></style>
