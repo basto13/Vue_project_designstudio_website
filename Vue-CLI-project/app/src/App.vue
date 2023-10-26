@@ -2,17 +2,20 @@
   <!-- <TestComponent /> -->
   <MainPage />
   <Blog />
+  <Navbar />
+  <FooterPage />
 </template>
 
 <script>
 import MainPage from "./components/MainPage.vue";
 import Blog from "./components/Blog.vue";
-import TestComponent from "./components/TestComponent.vue";
+import Navbar from "./components/Navbar.vue";
+import FooterPage from "./components/FooterPage.vue";
+
 export default {
   components: {
-    // TestComponent,
-    // MainPage,
     Blog,
+
   },
 };
 </script>
