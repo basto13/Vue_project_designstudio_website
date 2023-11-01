@@ -1,3 +1,4 @@
+import ProjectDetails from './components/ProjectDetails.vue';
 <template>
   <!-- <TestComponent /> -->
   <MainPage />
@@ -5,6 +6,7 @@
   <Navbar />
   <FooterPage />
   <ProjectPage />
+  <ProjectDetails />
 </template>
 
 <script>
@@ -13,12 +15,14 @@ import Blog from "./components/Blog.vue";
 import Navbar from "./components/Navbar.vue";
 import FooterPage from "./components/FooterPage.vue";
 import ProjectPage from "./components/ProjectPage.vue";
+import ProjectDetails from "./components/ProjectDetails.vue";
 
 export default {
   components: {
     // MainPage,
     // Blog,
-    ProjectPage,
+    // ProjectPage,
+    ProjectDetails,
   },
 };
 </script>
