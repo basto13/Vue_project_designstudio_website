@@ -12,6 +12,10 @@
 
     <div class="container">
       <div>
+        <h1>{{ heading }}</h1>
+        <p>{{ text }}</p>
+      </div>
+      <div>
         <div class="swiper">
           <ProjectDetailsSwiper />
         </div>
@@ -27,9 +31,14 @@ import FooterPage from "./FooterPage.vue";
 import Navbar from "./Navbar.vue";
 import ProjectDetailsSwiper from "./ProjectDetailsSwiper.vue";
 
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {};
+  },
+  computed: {
+    ...mapState(["heading", "text"]),
   },
   methods: {},
   components: { Navbar, FooterPage, ProjectDetailsSwiper },
