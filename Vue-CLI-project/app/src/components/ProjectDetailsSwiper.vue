@@ -14,19 +14,15 @@
   >
     <swiper-slide>
       <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        <img src="../assets/Project-details-swiper-photo_1.jpg" />
       </div> </swiper-slide
     ><swiper-slide>
       <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        <img src="../assets/Project-details-swiper-photo_2.jpg" />
       </div> </swiper-slide
     ><swiper-slide>
       <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      </div> </swiper-slide
-    ><swiper-slide>
-      <div class="swiper-zoom-container">
-        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        <img src="../assets/Project-details-swiper-photo_3.jpg" />
       </div>
     </swiper-slide>
   </swiper>

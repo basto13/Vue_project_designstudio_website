@@ -11,10 +11,13 @@
     </div>
 
     <div class="container">
-      <div>
-        <h1>{{ heading }}</h1>
-        <p>{{ text }}</p>
+        <div class="project-info-table">
+                  <div class="project-info">
+        <h1 class="project-info_heading">{{ heading }}</h1>
+        <p class="project-info_text">{{ text }}</p>
       </div>
+        </div>
+
       <div>
         <div class="swiper">
           <ProjectDetailsSwiper />
