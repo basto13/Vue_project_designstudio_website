@@ -1,18 +1,19 @@
 <template>
-  <div>
-    <body>
-      <Navbar />
-      <main>
+     <main>
         <div class="intro-section">
           <img
             src="../assets/blogpage_intro_photo.jpg"
             alt="blogpage_intro_photo"
             class="intro-section__img"
           />
+          <div class="page-intro__heading">
+            <h class="page-intro__heading_title">Articles &amp; News</h>
+            <p class="page-intro__heading_navbar">Home / Blog</p>
+          </div>
         </div>
         <div class="container">
           <div class="post-content">
-            <h class="post-content__heading">Latest Post</h>
+            <div class="post-content__heading">Latest Post</div>
             <div class="post-content__card">
               <img
                 src="../assets/blog-post-img.jpg"
@@ -35,6 +36,8 @@
               </div>
             </div>
           </div>
+
+          <div class="articles-heading">Articles &amp; News</div>
           <div id="blogApp" class="articles-news">
             <div class="news__block">
               <div
@@ -56,11 +59,6 @@
           </div>
         </div>
       </main>
-      <div class="container">
-        <FooterPage />
-      </div>
-    </body>
-  </div>
 </template>
 
 <script>
@@ -72,19 +70,19 @@ export default {
     return {
       newsItems: [
         {
-          imgSrc: "../assets/news_photo_1.jpg",
+          imgSrc: "/public/img/news_photo_1.jpg",
           alt: "news_photo",
           heading: "Let’s Get Solution For Building Construction Work",
           date: "26 December, 2022",
         },
         {
-          imgSrc: "../assets/news_photo_2.jpg",
+          imgSrc: "/public/img/news_photo_2.jpg",
           alt: "news_photo",
           heading: "Let’s Get Solution For Building Construction Work",
           date: "26 December, 2022",
         },
         {
-          imgSrc: "../assets/news_photo_3.jpg",
+          imgSrc: "/public/img/news_photo_3.jpg",
           alt: "news_photo",
           heading: "Let’s Get Solution For Building Construction Work",
           date: "26 December, 2022",

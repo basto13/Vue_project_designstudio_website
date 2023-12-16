@@ -1,11 +1,9 @@
 .intro-section {
   position: relative;
+
   .page-intro__heading {
     position: absolute;
     position: absolute;
-    top: 50%; /* Положение верхнего края элемента по центру по вертикали */
-    left: 50%; /* Положение левого края элемента по центру по горизонтали */
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,6 +12,8 @@
     width: 500px;
     height: 180px;
     border-radius: 30px 30px 0 0;
+    bottom: 0;
+    left: calc(50% - 250px);
 
     &_title {
       color: #292f36;
@@ -61,6 +61,12 @@
 .project-item {
   width: 50%; /* Делаем каждый элемент по 50% ширины контейнера для 2 столбцов */
   box-sizing: border-box;
+  padding: 10px;
+}
+
+.project-item > img {
+  width: 100%;
+  height: auto;
 }
 
 // .container {

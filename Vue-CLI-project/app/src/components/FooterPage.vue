@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <footer>
       <div class="company-info">
         <svg
@@ -17,8 +17,7 @@
         </svg>
         <div class="company-info__name">Interno</div>
         <p class="company-info__text">
-          It is a long established fact that a reader will be distracted
-          lookings.
+          It is a long established fact that a reader will be distracted lookings.
         </p>
         <div class="company-info__social-network">
           <svg
@@ -51,16 +50,19 @@
       </div>
       <div class="app-menu">
         <p>Pages</p>
-        <p>Home</p>
-        <p>Project</p>
-        <p>Blog</p>
+        <router-link to="/home">Home</router-link>
+        <router-link to="/projects">Project</router-link>
+        <router-link to="/blog">Blog</router-link>
       </div>
       <div class="contacts">
         <p>Contact</p>
-        <p>55 East Birchwood Ave.</p>
-        <p>Brooklyn, New York 11201</p>
-        <p>contact@interno.com</p>
-        <p>(123) 456 - 7890</p>
+        <p>
+        55 East Birchwood Ave. Brooklyn, New York 11201
+        <br>
+        contact@interno.com
+        <br>
+        (123) 456 - 7890
+        </p>
       </div>
     </footer>
   </div>

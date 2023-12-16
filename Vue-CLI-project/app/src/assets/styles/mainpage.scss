@@ -13,48 +13,6 @@ body {
   padding-left: 300px;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  &__company {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    &__logo {
-      width: 33.998px;
-      height: 34px;
-      flex-shrink: 0;
-    }
-    &__name {
-      color: #292f36;
-      font-family: DM Serif Display;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 125%; /* 50px */
-    }
-  }
-
-  &__menu {
-    color: #292f36;
-    text-align: center;
-    font-family: Jost;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 125%; /* 25px */
-    display: flex;
-    flex-direction: row;
-
-    &__option {
-      padding-left: 50px;
-    }
-  }
-}
-
 .introduction-section {
   position: relative;
   display: flex;
@@ -376,6 +334,22 @@ footer {
     }
   }
 
+  .app-menu > p::after {
+    content: '';
+    height: 26px;
+    display: block;
+  }
+
+  .app-menu > a {
+    text-decoration: none;
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
   .contacts {
     display: flex;
     flex-direction: column;
@@ -386,6 +360,10 @@ footer {
 
     p:first-child {
       @include navbar_heading();
+    }
+
+    p:not(first-child) {
+      margin-top: 26px;
     }
   }
 }

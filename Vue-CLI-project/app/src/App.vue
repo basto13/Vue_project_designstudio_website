@@ -1,12 +1,10 @@
 import ProjectDetails from './components/ProjectDetails.vue';
 <template>
-  <!-- <TestComponent /> -->
-  <MainPage />
-  <Blog />
-  <Navbar />
-  <FooterPage />
-  <ProjectPage />
-  <ProjectDetails />
+    <Navbar />
+
+    <router-view></router-view>
+
+    <FooterPage />
 </template>
 
 <script>
@@ -19,10 +17,12 @@ import ProjectDetails from "./components/ProjectDetails.vue";
 
 export default {
   components: {
-    // MainPage,
-    // Blog,
-    // ProjectPage,
+    MainPage,
+    Navbar,
+    Blog,
+    ProjectPage,
     ProjectDetails,
+    FooterPage
   },
 };
 </script>

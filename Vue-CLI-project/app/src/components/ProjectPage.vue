@@ -1,7 +1,5 @@
 <template>
   <div>
-    <Navbar />
-
     <div class="intro-section">
       <img
         src="../assets/ProjectPageIntro.jpg"
@@ -31,8 +29,6 @@
       <div>
         <ProjectList :category="category" class="projects-list" />
       </div>
-
-      <FooterPage />
     </div>
   </div>
 </template>

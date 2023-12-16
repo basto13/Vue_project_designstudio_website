@@ -60,8 +60,7 @@
             </svg>
             <div class="company-info__name">Interno</div>
             <p class="company-info__text">
-              It is a long established fact that a reader will be distracted
-              lookings.
+              It is a long established fact that a reader will be distracted lookings.
             </p>
             <div class="company-info__social-network">
               <svg
@@ -109,26 +108,29 @@
       </div>
     </body>
   </div>
-
-  <script>
-    export default {
-      components: {
-        blogArticleList,
-      },
-      data() {
-        return {
-          tagsList: [
-            "Kitchen",
-            "Bedroom",
-            "Building",
-            "Architecture",
-            "Kitchen Planning",
-          ],
-        };
-      },
-      methods: {},
-    };
-  </script>
-
-  <style lang="scss" scoped></style>
 </template>
+
+<script>
+  import BlogArticleList from "./BlogArticleList.vue";
+
+  export default {
+    components: {
+      BlogArticleList,
+    },
+    data() {
+      return {
+        tagsList: [
+          "Kitchen",
+          "Bedroom",
+          "Building",
+          "Architecture",
+          "Kitchen Planning",
+        ],
+      };
+    },
+    methods: {},
+  };
+</script>
+
+<style lang="scss" scoped></style>
+

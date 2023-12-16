@@ -3,13 +3,20 @@
 .intro-section {
   &__img {
     width: 100vw;
-    margin-bottom: 100px;
   }
+  margin-bottom: 100px;
+}
+
+.articles-heading {
+  @include main_heading();
+  margin-top: 150px;
+  margin-bottom: 27px;
 }
 
 .post-content {
   &__heading {
     @include main_heading();
+    margin-bottom: 27px;
   }
 
   &__card {

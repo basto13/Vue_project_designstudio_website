@@ -1,0 +1,49 @@
+.navbar-container {
+    padding: 44px 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__company {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__logo {
+            width: 33.998px;
+            height: 34px;
+            flex-shrink: 0;
+        }
+
+        &__name {
+            color: #292f36;
+            font-family: DM Serif Display;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            /* 50px */
+        }
+    }
+
+    &__menu {
+        color: #292f36;
+        text-align: center;
+        font-family: Jost;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+        /* 25px */
+        display: flex;
+        flex-direction: row;
+
+        &__option {
+            padding-left: 50px;
+        }
+    }
+}

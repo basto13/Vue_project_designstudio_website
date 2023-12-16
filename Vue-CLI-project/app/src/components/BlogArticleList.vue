@@ -5,7 +5,6 @@
 <script>
     export default {
 
-        const blogArticlesList = {
   props: ["tagsList"],
   data() {
     return {
@@ -76,25 +75,24 @@
   },
 
   template: `
-  <div >
-  <div class="blogpost__block_selectors">
-    <h2>Tags</h2>
-    <ul >
-      <li v-for="tag in tagsList" :key="tag" @click="filterArticlesByTag(tag)">{{ tag }}</li>
-    </ul>
-  </div>
-  <div class="blogpost__block_articles" v-for="article in filteredArticles" :key="article.heading">
-    <img :src="article.imgSrc" :alt="article.alt">
-    <h2>{{ article.heading }}</h2>
-    <p>{{ article.text }}</p>
-    <p>Date: {{ article.date }}</p>
-    <p>Tag: {{ article.tag }}</p>
-  </div>
-  </div>
-`,
+    <div>
+    <div class="blogpost__block_selectors">
+      <h2>Tags</h2>
+      <ul >
+        <li v-for="tag in tagsList" :key="tag" @click="filterArticlesByTag(tag)">{{ tag }}</li>
+      </ul>
+    </div>
+    <div class="blogpost__block_articles" v-for="article in filteredArticles" :key="article.heading">
+      <img :src="article.imgSrc" :alt="article.alt">
+      <h2>{{ article.heading }}</h2>
+      <p>{{ article.text }}</p>
+      <p>Date: {{ article.date }}</p>
+      <p>Tag: {{ article.tag }}</p>
+    </div>
+    </div>
+  `,
 };
 
-    }
 </script>
 
 <style lang="scss" scoped></style>

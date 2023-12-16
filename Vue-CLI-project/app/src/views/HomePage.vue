@@ -1,5 +1,8 @@
 <template>
-  <div class="container">
+  <div>
+    <body>
+      <div class="container">
+        <Navbar />
         <main>
           <div class="introduction-section">
             <img
@@ -194,7 +197,7 @@
               <div class="news__block">
                 <div class="news__block__item">
                   <img
-                    src="/public/img/news_photo_1.jpg"
+                    src="../assets/news_photo_1.jpg"
                     alt="news_photo"
                     class="news__block__item__img"
                   />
@@ -205,7 +208,7 @@
                 </div>
                 <div class="news__block__item">
                   <img
-                    src="/public/img/news_photo_2.jpg"
+                    src="../assets/news_photo_2.jpg"
                     alt="news_photo"
                     class="news__block__item__img"
                   />
@@ -216,7 +219,7 @@
                 </div>
                 <div class="news__block__item">
                   <img
-                    src="/public/img/news_photo_3.jpg"
+                    src="../assets/news_photo_3.jpg"
                     alt="news_photo"
                     class="news__block__item__img"
                   />
@@ -229,14 +232,17 @@
             </div>
           </div>
         </main>
+        <FooterPage />
+      </div>
+    </body>
   </div>
 </template>
 
 <script>
-import FooterPage from "./FooterPage.vue";
-import Navbar from "./Navbar.vue";
+import FooterPage from "../components/FooterPage.vue";
+import Navbar from "../components/Navbar.vue";
 
-export default { components: { Navbar, FooterPage } };
+export default { name: "HomePage", components: { Navbar, FooterPage } };
 </script>
 
 <style lang="scss" scoped></style>
